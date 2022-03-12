@@ -25,6 +25,7 @@ If no solution exists, the program will output an appropriate message.
 
 - Besa, J. J., Johnson, T., Mamano, N., Osegueda, M. C., & Williams, P. (2022). Taming the knight's tour: Minimizing turns and crossings. Theoretical Computer Science, 902, 1-20.
 - Bi, B., Butler, S., DeGraaf, S., & Doebel, E. (2015). Knight’s tours on boards with odd dimensions. Involve, a Journal of Mathematics, 8(4), 615-627.
+- Conrad, A., Hindrichs, T., Morsy, H., & Wegener, I. (1994). Solution of the knight's Hamiltonian path problem on chessboards. Discrete Applied Mathematics, 50(2), 125-134.
 - Lin, S. S., & Wei, C. L. (2005). Optimal algorithms for constructing knight's tours on arbitrary n× m chessboards. Discrete applied mathematics, 146(3), 219-232.
 - McGown, K., & Leininger, A. (2002). Knight’s tours. Cull, Paul (advisor). Oregon State Univesity.
 - Parberry, I. (1997). An efficient algorithm for the Knight's tour problem. Discrete Applied Mathematics, 73(3), 251-260.
