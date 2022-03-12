@@ -14,12 +14,10 @@ def dfs (graph, vertices, path, n):
   vertices.sort(key=lambda k: len(graph[k]))
   for vertex in vertices:
     path += [vertex]
-    for val in graph[vertex]:
-      graph[val].remove(vertex)
+    for val in graph[vertex]: graph[val].remove(vertex)
     yield from dfs(graph, graph[vertex], path, n)
     path.pop()
-    for val in graph[vertex]:
-      graph[val] += [vertex]
+    for val in graph[vertex]: graph[val] += [vertex]
 
 def knights_tour(start,n):
   graph,vertices = defaultdict(list),[(i,j) for i in range(n) for j in range(n)]
@@ -31,5 +29,5 @@ def knights_tour(start,n):
 
 
 #print(knights_tour((0,0),100))
-print(knights_tour((4,3),5))
+print(knights_tour((3,3),5))
 print(knights_tour((0,0),4))

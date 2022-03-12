@@ -1,5 +1,6 @@
 # ♞ Knight's tour
-Comparison between a local search and a divide-and-conquer algorithm
+
+Knight's tour: a comparison between a backtracking and a divide-and-conquer algorithm
 
 
 ## ♘ Usage
@@ -7,18 +8,16 @@ Comparison between a local search and a divide-and-conquer algorithm
 To run the program, make sure to provide the input size n as an argument. For example:
 
 ```
-python3 nqueens.py 250
+python3 dfstour.py 16
 ```
 
-The above command will write a solution for the 250-queens problem to a .out file in the output folder (which will be created if it does not exist) located in the current working directory. For sizes n < 200, a graphical representation of the chessboard is included. For larger problem sizes, the output only consists of a list of all the queen positions.  
-The same program also allows for specifying one fixed board location, indicated by its coordinates. For example:  
+Divide & conquer
 
 ```
-python3 nqueens.py 10 [2,8]
+python3 divtour.py 16
 ```
 
-This command will generate a solution for a problem with 10 queens, of which one is set to take the spot with row index 2 and column index 8.    
-If no solution exists, the program will output an appropriate message.    
+
 
 
 ## ♘ References  
