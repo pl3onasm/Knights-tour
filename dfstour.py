@@ -75,7 +75,7 @@ def getFileNumber(path):
   files = os.listdir(path)
   if files:
     for idx,file in enumerate(files):
-      files[idx] = int(file[:-4])
+      files[idx] = int(file.split('.')[0])
     files.sort()
     return 1 + files.pop()
   return 1
