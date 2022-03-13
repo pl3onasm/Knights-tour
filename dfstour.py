@@ -29,7 +29,7 @@ def dfs (graph, vertices, path, n):
   return False
 
 def tour(n,start):
-  if n<5 or n&1 and sum(start)&1: None  # coloring rule
+  if n<5 or n&1 and sum(start)&1: return None  # coloring rule
   graph,vertices = defaultdict(list),[(i,j) for i in range(n) for j in range(n)]
   for vertex in vertices:
     graph[vertex] = getJumps(*vertex,n,start)

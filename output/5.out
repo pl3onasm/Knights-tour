@@ -1,6 +1,6 @@
 
-==< Knight's tour on a 5x5 chessboard starting at (1,2) >==
+==< Knight's tour on a 25x25 chessboard starting at (10,15) >==
 
-Execution time: 0.381 s
+Execution time: 0.000 s
 
 There is no solution.
