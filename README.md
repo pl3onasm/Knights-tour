@@ -1,21 +1,20 @@
 # ♞ Knight's tour
 
-Knight's tour: a comparison between a backtracking and a divide-and-conquer algorithm
+This program returns a path for a knight's tour on a nxn chessboard, where n <= 100.  
+The output consists of a list of coordinates indicating the successive knight's jumps on the chessboard.  
+For n < 30 a graphical representation is included.
 
 
 ## ♘ Usage
 
-To run the program, make sure to provide the input size n as an argument. For example:
+To run the program, pass the input size n and the starting point as arguments.  
+For example:
 
 ```
-python3 dfstour.py 16
+python3 dfstour.py 16 [1,2]
 ```
 
-Divide & conquer
 
-```
-python3 divtour.py 16
-```
 
 
 
