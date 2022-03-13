@@ -16,7 +16,6 @@ def distance(x,y,n):
 
 def dfs (graph, vertices, path, n):
   if len(path) == n*n: return True
-  
   if sum(int(len(val)==0) for val in graph.values()) > 1:  
     return False  # backtrack if more than two unexplored vertices have degree 1
   vertices.sort(key=lambda k: (len(graph[k]),-distance(*k,n)))
@@ -55,8 +54,7 @@ def output (path,s,t,n,time):
       out += "\n"
       w = n*5 if n < 10 else n*6
       for i in range(n):
-        out += '\t'+'-'*(w+1)+'\n'
-        out += '\t'
+        out += '\t'+'-'*(w+1)+'\n\t'
         for j in range(n):
           d = board[i][j]
           if n <10:
@@ -67,8 +65,7 @@ def output (path,s,t,n,time):
             else: out += f"|  ♞ "
         out += "|"+'\n'
       out += '\t'+'-'*(w+1)+'\n\n'
-  else:
-    out += 'There is no solution.\n'
+  else: out += 'There is no solution.\n'
   return out
 
 def getFileNumber(path):
@@ -89,8 +86,7 @@ def main(n,start):
   path = os.getcwd() + "/output"
   if not os.path.exists(path): 
     os.makedirs(path)
-  fileNum = getFileNumber(path)
-  outFile = path + f"/{fileNum}.out"
+  outFile = path + f"/{getFileNumber(path)}.out"
    
   with open(outFile, 'w', encoding = "utf-8") as f:
     f.write(out)
