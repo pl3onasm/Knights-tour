@@ -5,12 +5,6 @@ This program returns a path for a knight's tour on a nxn chessboard, where n <= 
 
 ## ♘ Usage
 
-Note that for large boards (n > 100), the sack size will have to be increased. This can be done in the terminal:  
-
-```
-ulimit -s unlimited
-```
-
 To run the program, pass the input size n and the starting point as arguments.  
 For example:
 
@@ -18,8 +12,11 @@ For example:
 python3 dfstour.py 16 [1,2]
 ```
 
+Note that for large boards (n > 100), the sack size will have to be increased. This can be done in the terminal:  
 
-
+```
+ulimit -s unlimited
+```
 
 
 
