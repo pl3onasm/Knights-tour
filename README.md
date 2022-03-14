@@ -1,10 +1,15 @@
 # ♞ Knight's tour
 
-This program returns a path for a knight's tour on a nxn chessboard, where n <= 100. The output consists of a list of coordinates indicating the successive knight's jumps on the chessboard.  
-For n < 30 a graphical representation is included.
+This program returns a path for a knight's tour on a nxn chessboard, where n <= 400. The output consists of a list of coordinates indicating the successive knight's jumps on the chessboard. For n < 30 a graphical representation is included.
 
 
 ## ♘ Usage
+
+Note that for large boards (n > 100), the sack size will have to be increased. This can be done in the terminal:  
+
+```
+ulimit -s unlimited
+```
 
 To run the program, pass the input size n and the starting point as arguments.  
 For example:
