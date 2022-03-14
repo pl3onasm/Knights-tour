@@ -12,7 +12,7 @@ For example:
 python3 dfstour.py 16 [1,2]
 ```
 
-Note that for large boards (n > 100), the sack size will have to be increased. This can be done in the terminal:  
+Note that for large boards (n > 100), the stack size will have to be increased. This can be done in the terminal:  
 
 ```
 ulimit -s unlimited
