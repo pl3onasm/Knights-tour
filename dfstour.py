@@ -1,13 +1,13 @@
 
 import os,sys; from collections import defaultdict
 from time import perf_counter
-sys.setrecursionlimit(100000)
+sys.setrecursionlimit(10000000)
 
 def getJumps(x,y,n,start):
-  jumps = []
+  jumps = set()
   for i,j in (2,-1),(-2,-1),(-1,-2),(1,-2),(-1,2),(1,2),(2,1),(-2,1):
     if 0 <= x+i < n and 0 <= y+j < n and (x+i,y+j)!=start: 
-      jumps += [(x+i,y+j)]
+      jumps.add((x+i,y+j))
   return jumps
 
 def distance(x,y,n):  
@@ -16,22 +16,21 @@ def distance(x,y,n):
 
 def dfs (graph, vertices, path, n):
   if len(path) == n*n: return True
-  if sum(int(len(val)==0) for val in graph.values()) > 1:  
-    return False  # backtrack if more than two unexplored vertices have degree 1
-  vertices.sort(key=lambda k: (len(graph[k]),-distance(*k,n)))
+  vertices = sorted(vertices, key=lambda k: (len(graph[k]),-distance(*k,n)))
   for vertex in vertices:
     path += [vertex]
     for val in graph[vertex]: graph[val].remove(vertex)
     if dfs(graph, graph[vertex], path, n): return True
     path.pop()
-    for val in graph[vertex]: graph[val] += [vertex]
+    for val in graph[vertex]: graph[val].add(vertex)
   return False
 
 def tour(n,start):
   if n<5 or n&1 and sum(start)&1: return None  # coloring rule
-  graph,vertices = defaultdict(list),[(i,j) for i in range(n) for j in range(n)]
-  for vertex in vertices:
-    graph[vertex] = getJumps(*vertex,n,start)
+  graph = defaultdict(set)
+  for i in range (n):
+    for j in range(n):
+      graph[(i,j)] = getJumps(*(i,j),n,start)
   path = [start]
   if dfs(graph, graph[start], path, n): return path
   return None
