@@ -1,6 +1,6 @@
 
 import os,sys; from collections import defaultdict
-from time import perf_counter; import pygame
+from time import perf_counter
 sys.setrecursionlimit(10000000)
 
 def getJumps(x,y,n,start):
@@ -67,6 +67,15 @@ def output (path,s,t,n,time):
   else: out += 'There is no solution.\n'
   return out
 
+def getFileNumber(dirpath):
+  files = os.listdir(dirpath)
+  if files:
+    for idx,file in enumerate(files):
+      files[idx] = int(file.split('.')[0])
+    files.sort()
+    return 1 + files.pop()
+  return 1
+  
 def main(n,start):
   begin = perf_counter()
   res = tour(n,start)
