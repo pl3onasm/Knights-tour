@@ -1,6 +1,6 @@
 # ♞ Knight's tour
 
-This program returns a path for a knight's tour on a nxn chessboard, where n <= 1000. The output consists of a list of coordinates indicating the successive knight's jumps on the chessboard. For n < 30 a graphical representation is included.
+This program returns a path for a knight's tour on a nxn chessboard, where n <= 1000. The output consists of a list of coordinates indicating the successive knight's jumps on the chessboard. For n < 32 a graphical representation is included and a visual tour pops up in a separate window. To pause the visual tour, hit the space bar, and to continue hit it once again.
 
 
 ## ♘ Usage
@@ -9,7 +9,7 @@ To run the program, pass the input size n and the starting point as arguments.
 For example:
 
 ```
-python3 dfstour.py 16 [1,2]
+python3 tour.py 16 [1,2]
 ```
 
 Note that for large boards (n > 100), the stack size will have to be increased. This can be done in the terminal:  
@@ -17,8 +17,6 @@ Note that for large boards (n > 100), the stack size will have to be increased. 
 ```
 ulimit -s unlimited
 ```
-
-
 
 ## ♘ References  
 
