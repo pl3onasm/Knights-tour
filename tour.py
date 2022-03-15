@@ -67,61 +67,6 @@ def output (path,s,t,n,time):
   else: out += 'There is no solution.\n'
   return out
 
-def getFileNumber(dirpath):
-  files = os.listdir(dirpath)
-  if files:
-    for idx,file in enumerate(files):
-      files[idx] = int(file.split('.')[0])
-    files.sort()
-    return 1 + files.pop()
-  return 1
-
-def graphicTour(N,path):
-	horse = pygame.image.load("knight.png")
-
-	# Initialize window size and title:
-	pygame.init()
-	window = pygame.display.set_mode((32*N,32*N))
-	pygame.display.set_caption("Knight's Tour")
-	background = pygame.image.load("chess.png")
-	index = 0
-
-	# Text:
-	font = pygame.font.SysFont("Ubuntu",16)
-	text = []
-	surface = []
-
-	while True:
-		# Fill background:
-		window.blit(background,(0,0))
-		if index < N*N:
-			window.blit(horse,(path[index][0]*32,path[index][1]*32))
-			text.append(font.render(str(index+1),True,(255,255,255)))
-			surface.append(text[index].get_rect())
-			surface[index].center = (path[index][0]*32+16,path[index][1]*32+16)
-			index += 1
-		else:
-			window.blit(horse,(path[index-1][0]*32,path[index-1][1]*32))
-		for x in range(10000000):
-			pass
-		# Check events on window:
-		for event in pygame.event.get():
-			if event.type == pygame.QUIT:
-				pygame.quit()
-				sys.exit()
-			elif event.type == pygame.KEYDOWN:
-				if event.key == 27:
-					pygame.quit()
-					sys.exit()
-
-		for i in range(index):
-			window.blit(text[i],surface[i])
-
-		# Update window:
-		pygame.display.update()
-
-
-
 def main(n,start):
   begin = perf_counter()
   res = tour(n,start)

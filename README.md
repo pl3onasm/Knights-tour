@@ -1,6 +1,6 @@
 # ♞ Knight's tour
 
-This program returns a path for a knight's tour on a nxn chessboard, where n <= 1000. The output consists of a list of coordinates indicating the successive knight's jumps on the chessboard. For n < 32 a graphical representation is included and a visual tour pops up in a separate window. To pause the visual tour, hit the space bar, and to continue hit it once again.
+This program returns a path for a knight's tour on a nxn chessboard, where n <= 1000. The output consists of a list of coordinates indicating the successive knight's jumps on the chessboard. For n < 32 a graphical representation is included in the output file and a visual tour pops up in a separate window. To pause the visual tour, hit the space bar, and to continue hit it once again.
 
 
 ## ♘ Usage
