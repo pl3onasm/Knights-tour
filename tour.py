@@ -40,13 +40,13 @@ def output (path,s,t,n,time):
         + f'chessboard starting at ({s},{t}) >==\n\n'
         + f"Execution time: {time:.3f} s\n\n")
   if path:
-    out, newline = 'Path:\n[', 0
+    out, newline, val = 'Path:\n[', 0, 110 if n > 15 else 50
     for i,(h,k) in enumerate(path):
       out += (tup :=  f'({h},{k})')
-      newline = 0 if newline >= 110 else newline+len(tup)
+      newline = 0 if newline >= val else newline+len(tup)
       if i<n*n-1: out += ',' if not i or newline else ',\n'
     out += ']\n'
-    if n < 30:
+    if n < 32:
       board = [n*[0] for _ in range(n)]
       for i in range(n*n):
         x,y = path[i]
@@ -67,7 +67,6 @@ def output (path,s,t,n,time):
       out += '\t'+'-'*(w+1)+'\n\n'
     return info + out
   return info + 'There is no solution.\n'
-  
 
 def getFileNumber(dirpath):
   files = os.listdir(dirpath)

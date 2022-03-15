@@ -1,1 +1,4 @@
 visualtour.py
+__pycache__/visualtour.cpython-38.pyc
+.gitignore
+__pycache__/tour.cpython-38.pyc
