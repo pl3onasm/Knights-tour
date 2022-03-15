@@ -26,11 +26,11 @@ def dfs (graph, vertices, path, n):
   return False
 
 def tour(n,start):
-  if n<5 or n&1 and sum(start)&1: return None  # coloring rule
+  if n<5 or n&1 and sum(start)&1: return None  # color criterion
   graph = defaultdict(set)
   for i in range (n):
     for j in range(n):
-      graph[(i,j)] = getJumps(*(i,j),n,start)
+      graph[(i,j)] = getJumps(i,j,n,start)
   path = [start]
   if dfs(graph, graph[start], path, n): return path
   return None
@@ -81,7 +81,7 @@ def main(n,start):
   res = tour(n,start)
   end = perf_counter()
   out = output(res,*start,n,end-begin) 
-  
+  print(res)
   path = os.getcwd() + "/output"
   if not os.path.exists(path): 
     os.makedirs(path)
