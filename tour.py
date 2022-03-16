@@ -7,10 +7,10 @@ def output (path,s,t,n,time):
         + f'chessboard starting at ({s},{t}) >==\n\n'
         + f"Execution time: {time:.3f} s\n\n")
   if path:
-    out, newline, val = 'Path:\n[', 0, 110 if n > 15 else 50
+    out, newline, lim = 'Path:\n[', 0, 110 if n > 15 else 50
     for i,(h,k) in enumerate(path):
       out += (tup :=  f'({h},{k})')
-      newline = 0 if newline >= val else newline+len(tup)
+      newline = 0 if newline >= lim else newline+len(tup)
       if i<n*n-1: out += ',' if not i or newline else ',\n'
     out += ']\n'
     if n < 32:
