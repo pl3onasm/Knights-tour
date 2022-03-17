@@ -50,10 +50,8 @@ def main(n,start):
   end = perf_counter()
   out = output(res,*start,n,end-begin) 
   path = os.getcwd() + "/output"
-  if not os.path.exists(path): 
-    os.makedirs(path)
+  if not os.path.exists(path): os.makedirs(path)
   outFile = path + f"/{getFileNumber(path)}.out"
-   
   with open(outFile, 'w', encoding = "utf-8") as f:
     f.write(out)
 
