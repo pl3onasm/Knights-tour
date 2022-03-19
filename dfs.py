@@ -30,8 +30,9 @@ def tour(n,start):
     for j in range(n):
       graph[(i,j)] = getJumps(i,j,n,start)
   path = [start]
-  if dfs(graph, graph[start], path, n): return path
-  return None
+  if dfs(graph, graph[start], path, n): 
+    return path
+  
 
 
 
