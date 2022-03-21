@@ -1,3 +1,13 @@
+#  ┌────────────────────────────────────────────────────────────────┐
+#  │  File name: dfs.py                                             │
+#  │  Author: David De Potter, pl3onasm@gmail.com                   │
+#  │  License: see the license file in this repository              │
+#  │  Description: this module computes a knight's tour by applying │
+#  │  a DFS guided by two heuristics, viz. Warnsdorff's rule and a  │
+#  |  heuristic prioritizing nodes with largest distance to the     |
+#  |  board's center                                                |
+#  └────────────────────────────────────────────────────────────────┘
+
 from collections import defaultdict
 import sys; sys.setrecursionlimit(10000000)
 
