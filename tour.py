@@ -1,11 +1,11 @@
-#  ┌──────────────────────────────────────────────────────────┐
-#  │  File name: tour.py                                      │
-#  │  Author: David De Potter, pl3onasm@gmail.com             │
-#  │  License: see the license file in this repository        │
-#  │  Description: this module ensures the results are nicely │
-#  │  formatted and stored, including a graphical represen-   │
-#  |  tation if applicable                                    |
-#  └──────────────────────────────────────────────────────────┘
+#  ┌─────────────────────────────────────────────────────────┐
+#  │  File name: tour.py                                     │
+#  │  Author: David De Potter, pl3onasm@gmail.com            │
+#  │  License: see the license file in this repository       │
+#  │  Description: this module ensures input is read and     │
+#  │  results are nicely formatted and stored, including a   │
+#  |  graphical representation if applicable                 |
+#  └─────────────────────────────────────────────────────────┘
 
 import os,sys
 from time import perf_counter
