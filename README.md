@@ -13,7 +13,7 @@ python3 tour.py 16 [1,2]
 ```
 This command will compute a knight's tour that starts at the square with row index 1 and column index 2 on a 16x16 chessboard. The output will be written to the /output folder (which will be created if it does not exist).   
 
-Note that for large boards (n > 100), the stack size will have to be increased. This can be done in the terminal:  
+Note that for large boards (n > 100), the stack size will have to be increased in order to avoid segmentation faults. This can be done in the terminal:  
 
 ```
 ulimit -s unlimited
